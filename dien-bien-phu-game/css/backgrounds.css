@@ -1,0 +1,284 @@
+/* Background Management CSS */
+/* Đây là file CSS chuyên dụng để quản lý background cho tất cả các trang */
+
+/* ========================================
+   BACKGROUND CONFIGURATION
+   ======================================== */
+
+/* Base background mixin để tái sử dụng */
+.page-background {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* Mobile optimization - fixed attachment có thể gây lag trên mobile */
+@media (max-width: 768px) {
+    .page-background {
+        background-attachment: scroll;
+    }
+}
+
+/* ========================================
+   HOME PAGE BACKGROUND
+   ======================================== */
+.home-page {
+    background-image: url('home-bg.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-color: #1a472a !important;
+}
+
+/* ========================================
+   HISTORY PAGE BACKGROUND
+   ======================================== */
+.history-page {
+    background-image: url('../assets/backgrounds/gia-tri-lich-su-cua-chien-thang-dien-bien-phu-tren-khong-24-.1632.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-color: #2c3e50 !important;
+}
+
+/* Apply background to all sections on home page */
+.home-page .hero-section,
+.home-page .damage-section,
+.home-page section,
+.home-page div {
+    background: transparent !important;
+}
+
+/* Đảm bảo toàn bộ page có cùng background */
+.home-page * {
+    background-color: transparent !important;
+}
+
+/* Override hero-section background for home page */
+.home-page .hero-section {
+    background: transparent !important;
+}
+
+/* ========================================
+   DAY PAGES BACKGROUNDS  
+   ======================================== */
+
+/* Day 1 - Cuộc tấn công bất ngờ */
+.day1-page {
+    background-image: url('../assets/backgrounds/1.jpg'),
+                      url('../assets/images/aircraft.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-color: #1a472a !important;
+}
+
+/* Day 2 - Phản ứng và chuẩn bị */  
+.day2-page {
+    background-image: url('../assets/backgrounds/2.jpg'),
+                      url('../assets/images/bunker.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-color: #1a472a !important;
+}
+
+/* Day 3 - Trận đánh quyết liệt */
+.day3-page {
+    background-image: url('../assets/backgrounds/dbp2.jpg'),
+                      url('../assets/images/F-4C.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-color: #1a472a !important;
+}
+
+/* Day 4 - Tổ chức phòng thủ */
+.day4-page {
+    background-image: url('../assets/backgrounds/4.jpg'),
+                      url('../assets/images/trench.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-color: #1a472a !important;
+}
+
+/* Day 5 - Cuộc chiến ban đêm */
+.day5-page {
+    background-image: url('../assets/backgrounds/images.jpg'),
+                      url('../assets/images/tent.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-color: #1a472a !important;
+}
+
+/* Day 6 - Phản công mạnh mẽ */
+.day6-page {
+    background-image: url("../assets/backgrounds/images (1).jpg"),
+                      url('../assets/images/gun-barrel.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-color: #1a472a !important;
+}
+
+/* Day 7 - Chiến thuật mới */
+.day7-page {
+    background-image: url('../assets/backgrounds/a_07501607052023.jpg'),
+                      url('../assets/images/gun-body.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-color: #1a472a !important;
+}
+
+/* Day 8 - Kiên cường bảo vệ */
+.day8-page {
+    background-image: url('../assets/backgrounds/dien-bien-phu-him lam.jpg'),
+                      url('../assets/images/C-47.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-color: #1a472a !important;
+}
+
+/* Day 9 - Tấn công quyết định */
+.day9-page {
+    background-image: url('../assets/backgrounds/4073853798.png'),
+                      url('../assets/images/background.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-color: #1a472a !important;
+}
+
+/* Day 10 - Chiến thắng gần kề */
+.day10-page {
+    background-image: url('../assets/backgrounds/4d880b818a006dc16ccf1f618f5a2570biphu752019mot.jpg'),
+                      url('../assets/images/aircraft.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-color: #1a472a !important;
+}
+
+/* Day 11 - Thắng lợi vang dội */
+.day11-page {
+    background-image: url('../assets/backgrounds/gia-tri-lich-su-cua-chien-thang-dien-bien-phu-tren-khong-24-.1632.jpg'),
+                      url('../assets/images/bunker.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-color: #1a472a !important;
+}
+
+/* Day 12 - Chiến thắng hoàn toàn */
+.day12-page {
+    background-image: url('../assets/backgrounds/vna_potal_50_nam_chien_thang_"ha_noi_-_dien_bien_phu_tren_khong"_121972_-_122022_chien_thang_cua_y_chi_va_ban_linh_viet_nam_stand.jpg'),
+                      url('../assets/images/F-4C.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-color: #1a472a !important;
+}
+
+/* ========================================
+   OVERLAY EFFECTS
+   ======================================== */
+
+/* Dark overlay để đảm bảo text dễ đọc */
+.background-overlay::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Disable overlay cho home page để thấy rõ background */
+.home-page.background-overlay::before {
+    display: none;
+}
+
+/* Light overlay cho những hình quá tối */
+.background-overlay-light::before {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* ========================================
+   RESPONSIVE BACKGROUNDS
+   ======================================== */
+
+/* Tablet backgrounds */
+@media (max-width: 1024px) {
+    .page-background {
+        background-size: cover;
+        background-position: center top;
+    }
+}
+
+/* Mobile backgrounds */
+@media (max-width: 768px) {
+    .page-background {
+        background-size: cover;
+        background-position: center center;
+        background-attachment: scroll;
+    }
+}
+
+/* ========================================
+   ANIMATION EFFECTS (Optional)
+   ======================================== */
+
+/* Subtle zoom effect khi load trang */
+.page-background-animated {
+    animation: backgroundZoom 20s ease-in-out infinite alternate;
+}
+
+@keyframes backgroundZoom {
+    0% {
+        background-size: 100%;
+    }
+    100% {
+        background-size: 110%;
+    }
+}
+
+/* Parallax effect cho một số elements */
+.parallax-element {
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+/* Class để áp dụng nhanh background cho specific pages */
+.bg-war-scene { background-image: url('../assets/backgrounds/war-scene-1.jpg'); }
+.bg-hanoi-night { background-image: url('../assets/backgrounds/hanoi-night-1.jpg'); }
+.bg-aircraft-battle { background-image: url('../assets/backgrounds/aircraft-battle-1.jpg'); }
+.bg-bunker-scene { background-image: url('../assets/backgrounds/bunker-scene.jpg'); }
+.bg-explosion { background-image: url('../assets/backgrounds/explosion-scene.jpg'); }
+.bg-victory { background-image: url('../assets/backgrounds/victory-scene.jpg'); }

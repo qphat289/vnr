@@ -1,0 +1,177 @@
+/* Enhanced Detail Page Styling with Gray Borders */
+
+/* Cải thiện detail container */
+.detail-container {
+    background: transparent !important;
+}
+
+.detail-header {
+    background: rgba(128, 128, 128, 0.15) !important;
+    border-radius: 0 0 20px 20px !important;
+    backdrop-filter: blur(15px) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+    border: 2px solid rgba(128, 128, 128, 0.3) !important;
+    border-top: none !important;
+}
+
+/* Navigation buttons */
+.back-btn, .home-btn {
+    background: rgba(128, 128, 128, 0.2) !important;
+    border: 2px solid rgba(128, 128, 128, 0.4) !important;
+    border-radius: 20px !important;
+    padding: 10px 20px !important;
+    backdrop-filter: blur(10px) !important;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25) !important;
+    transition: all 0.3s ease !important;
+}
+
+.back-btn:hover, .home-btn:hover {
+    background: rgba(128, 128, 128, 0.3) !important;
+    border-color: rgba(169, 169, 169, 0.6) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* Content sections */
+.content-section {
+    background: rgba(128, 128, 128, 0.12) !important;
+    border: 2px solid rgba(128, 128, 128, 0.3) !important;
+    border-radius: 20px !important;
+    padding: 25px !important;
+    margin: 20px 0 !important;
+    backdrop-filter: blur(12px) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Timeline events */
+.timeline-event {
+    background: rgba(128, 128, 128, 0.1) !important;
+    border: 1px solid rgba(128, 128, 128, 0.3) !important;
+    border-radius: 15px !important;
+    padding: 20px !important;
+    margin: 15px 0 !important;
+    backdrop-filter: blur(8px) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+    border-left: 4px solid #a9a9a9 !important;
+}
+
+.event-time {
+    background: rgba(128, 128, 128, 0.2) !important;
+    border: 1px solid rgba(128, 128, 128, 0.4) !important;
+    border-radius: 12px !important;
+    padding: 8px 15px !important;
+    display: inline-block !important;
+    margin-bottom: 10px !important;
+    backdrop-filter: blur(6px) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Target and damage lists */
+.target-list, .damage-list {
+    background: rgba(128, 128, 128, 0.08) !important;
+    border: 1px solid rgba(128, 128, 128, 0.25) !important;
+    border-radius: 12px !important;
+    padding: 15px !important;
+    margin: 15px 0 !important;
+    backdrop-filter: blur(6px) !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Statistics cards */
+.statistics-card {
+    background: rgba(128, 128, 128, 0.15) !important;
+    border: 2px solid rgba(128, 128, 128, 0.4) !important;
+    border-radius: 18px !important;
+    padding: 20px !important;
+    margin: 15px 0 !important;
+    backdrop-filter: blur(12px) !important;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.25) !important;
+    transition: all 0.3s ease !important;
+}
+
+.statistics-card:hover {
+    transform: translateY(-3px) !important;
+    background: rgba(128, 128, 128, 0.2) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* Analysis sections */
+.analysis-section {
+    background: rgba(128, 128, 128, 0.12) !important;
+    border: 2px solid rgba(128, 128, 128, 0.35) !important;
+    border-radius: 20px !important;
+    padding: 25px !important;
+    margin: 20px 0 !important;
+    backdrop-filter: blur(12px) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Lesson learned boxes */
+.lesson-box {
+    background: rgba(128, 128, 128, 0.15) !important;
+    border: 2px solid rgba(128, 128, 128, 0.4) !important;
+    border-radius: 15px !important;
+    padding: 20px !important;
+    margin: 15px 0 !important;
+    backdrop-filter: blur(10px) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25) !important;
+    border-left: 5px solid #d3d3d3 !important;
+}
+
+/* Game sections */
+.game-section {
+    background: rgba(128, 128, 128, 0.1) !important;
+    border: 2px solid rgba(128, 128, 128, 0.3) !important;
+    border-radius: 20px !important;
+    padding: 30px !important;
+    margin: 25px 0 !important;
+    backdrop-filter: blur(15px) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+    text-align: center !important;
+}
+
+/* Play button styling */
+.play-button {
+    background: rgba(255, 215, 0, 0.9) !important;
+    border: 3px solid rgba(255, 215, 0, 0.6) !important;
+    border-radius: 25px !important;
+    padding: 15px 40px !important;
+    backdrop-filter: blur(10px) !important;
+    box-shadow: 0 5px 20px rgba(255, 215, 0, 0.4) !important;
+    transition: all 0.3s ease !important;
+}
+
+.play-button:hover {
+    background: rgba(255, 215, 0, 1) !important;
+    transform: translateY(-3px) scale(1.05) !important;
+    box-shadow: 0 8px 30px rgba(255, 215, 0, 0.6) !important;
+}
+
+/* Navigation section */
+.navigation-section {
+    background: rgba(128, 128, 128, 0.15) !important;
+    border: 2px solid rgba(128, 128, 128, 0.4) !important;
+    border-radius: 20px !important;
+    padding: 25px !important;
+    margin: 30px 0 !important;
+    backdrop-filter: blur(12px) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Next/Previous buttons */
+.nav-button {
+    background: rgba(128, 128, 128, 0.2) !important;
+    border: 2px solid rgba(128, 128, 128, 0.5) !important;
+    border-radius: 15px !important;
+    padding: 12px 25px !important;
+    backdrop-filter: blur(8px) !important;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25) !important;
+    transition: all 0.3s ease !important;
+}
+
+.nav-button:hover {
+    background: rgba(128, 128, 128, 0.3) !important;
+    border-color: rgba(169, 169, 169, 0.7) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.35) !important;
+}

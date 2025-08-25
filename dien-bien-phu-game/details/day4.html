@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 
 <head>
@@ -7,16 +7,20 @@
     <title>Ngày 4 - Chi Tiết | Điện Biên Phủ Trên Không</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/detail.css">
+    <link rel="stylesheet" href="../css/backgrounds.css">
+    <link rel="stylesheet" href="../css/simple-bg.css">
+    <link rel="stylesheet" href="../css/detail-blocks.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <div class="detail-container"><header class="detail-header">
+<body class="day4-page page-background background-overlay">
+<div class="detail-container">
+        <header class="detail-header">
             <div class="container">
                 <div class="back-navigation">
-                    <button onclick="goBack()" class="back-btn">← Quay lại</button>
+                    <button onclick="goBack()" class="back-btn">⬅ Quay lại</button>
                     <button onclick="goHome()" class="home-btn">🏠 Trang chủ</button>
                 </div>
                 <h1 class="detail-title">Ngày 4 - 21/12/1972</h1>
@@ -30,7 +34,7 @@
                     <div class="main-content">
                         <!-- Diễn biến chính -->
                         <div class="content-section">
-                            <h3>📋 Diễn biến</h3>
+                            <h3>📌 Diễn biến</h3>
                             <div class="timeline-event">
                                 <div class="event-time">21/12/1972</div>
                                 <div class="event-description">
@@ -53,7 +57,7 @@
 
                         <!-- Ý nghĩa lịch sử -->
                         <div class="content-section">
-                            <h3>⭐ Ý nghĩa lịch sử</h3>
+                            <h3>📖 Ý nghĩa lịch sử</h3>
                             <div class="significance-content">
                                 <p>Mỹ bắt đầu <strong>lo sợ, điều chỉnh chiến thuật</strong>. Ta chứng minh thế trận phòng không liên hoàn vẫn hiệu quả, ngay cả khi địch thay đổi mục tiêu.</p>
                             </div>
@@ -61,12 +65,12 @@
 
                         <!-- Các sự kiện chính -->
                         <div class="content-section">
-                            <h3>🎯 Sự kiện chính</h3>
+                            <h3>⭐ Sự kiện chính</h3>
                             <div class="events-timeline">
                                 <div class="timeline-item-detail">
                                     <div class="timeline-marker"></div>
                                     <div class="timeline-content-detail">
-                                        B-52 đánh <strong>Hải Phòng và Thái Nguyên</strong>.
+                                        B-52 đánh phá <strong>Hải Phòng và Thái Nguyên</strong>.
                                     </div>
                                 </div>
                                 <div class="timeline-item-detail">
@@ -111,21 +115,19 @@
 
                         <div class="navigation-box">
                             <h4>🧭 Điều hướng</h4>
-                            <button onclick="playDay(4)" class="play-btn">🎮 Chơi ngày này</button>
-                            <button onclick="viewDay(3)" class="prev-btn">⬅️ Ngày trước</button>
-                            <button onclick="viewDay(5)" class="next-btn">➡️ Ngày tiếp theo</button>
-                            <button onclick="viewAllDays()" class="overview-btn">📋 Xem tất cả</button>
+                            <button onclick="playDay(4)" class="play-btn">▶ Chơi ngày này</button>
+                            <button onclick="viewDay(3)" class="prev-btn">⬅ Ngày trước</button>
+                            <button onclick="viewDay(5)" class="next-btn">➡ Ngày tiếp theo</button>
+                            <button onclick="viewAllDays()" class="overview-btn">📅 Xem tất cả</button>
                         </div>
                     </div>
                 </div>
             </div>
         </main>
-    </div><script src="../js/data.js"></script>
-    <script src="../js/detail.js"></script></body>
+    </div>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/detail.js"></script>
+</body>
 
 </html>
-
-
-
-
-

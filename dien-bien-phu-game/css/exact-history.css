@@ -1,0 +1,270 @@
+/* HISTORY PAGE - EXACT MATCH TO HOME */
+
+/* RESET AND BASE */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: 'Roboto Slab', serif;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* BACKGROUND SETUP */
+body.history-page {
+    background-image: url('../assets/backgrounds/gia-tri-lich-su-cua-chien-thang-dien-bien-phu-tren-khong-24-.1632.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #1a472a;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Dark overlay to make background darker - like home page */
+body.history-page::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* LAYOUT STRUCTURE - FLEXBOX */
+body.history-page {
+    display: flex;
+    flex-direction: column;
+}
+
+body.history-page > .history-page {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1; /* Above the dark overlay */
+}
+
+/* TEXT STYLE */
+body.history-page h1,
+body.history-page h2,
+body.history-page h3,
+body.history-page p,
+body.history-page blockquote {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+body.history-page p {
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+/* HISTORY HEADER STYLING */
+body.history-page .history-header {
+    margin-bottom: 30px;
+    padding-top: 20px;
+}
+
+body.history-page .btn-back {
+    display: inline-block;
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+body.history-page .btn-back:hover {
+    background-color: rgba(255, 215, 0, 0.2);
+}
+
+body.history-page .history-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #FFD700;
+}
+
+body.history-page .history-subtitle {
+    font-size: 1.3rem;
+    font-style: italic;
+    margin-top: 0;
+}
+
+/* QUOTE STYLING */
+body.history-page .ho-chi-minh-quote {
+    background-color: rgba(139, 0, 0, 0.2);
+    border-left: 4px solid #FFD700;
+    padding: 15px 20px;
+    font-style: italic;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+/* CONCLUSION SECTION */
+body.history-page .conclusion-section {
+    background-color: rgba(26, 71, 42, 0.4);
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 30px;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+body.history-page .conclusion-section h2 {
+    color: #FFD700;
+    margin-top: 0;
+}
+
+/* NAVIGATION BUTTONS */
+body.history-page .navigation-section {
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+body.history-page .nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+body.history-page .nav-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+body.history-page .nav-btn.primary {
+    background-color: #1a472a;
+    color: #FFD700;
+    border: 2px solid #FFD700;
+}
+
+body.history-page .nav-btn.secondary {
+    background-color: #8B0000;
+    color: white;
+    border: 2px solid #FFD700;
+}
+
+body.history-page .nav-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* LAYOUT FOR HEADER AND CONTENT */
+body.history-page .container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 1; /* Above the dark overlay */
+}
+
+body.history-page .history-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+body.history-page .history-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* CONTENT BLOCK - NARROWER WITH EFFECTS */
+body.history-page .content-wrapper {
+    max-width: 800px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding: 25px 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+/* FOOTER - EXACT MATCH TO HOME PAGE */
+body.history-page .main-footer {
+    background: linear-gradient(135deg, #0f2415 0%, #1a472a 100%);
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    border-top: 3px solid #FFD700;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.3);
+    margin-top: auto;
+    position: relative;
+    z-index: 1; /* Above the dark overlay */
+}
+
+body.history-page .main-footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+body.history-page .main-footer p {
+    margin: 8px 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+body.history-page .main-footer p:first-child {
+    font-weight: bold;
+    color: #FFD700;
+}
+
+body.history-page .main-footer p:last-child {
+    font-style: italic;
+    color: #a8d8a8;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    body.history-page {
+        background-attachment: scroll;
+    }
+    
+    body.history-page .main-footer {
+        padding: 30px 0;
+    }
+    
+    body.history-page .main-footer p {
+        font-size: 14px;
+    }
+    
+    body.history-page .nav-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    body.history-page .nav-btn {
+        width: 80%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    body.history-page .container {
+        padding: 15px;
+    }
+    
+    body.history-page .content-wrapper {
+        padding: 20px;
+        margin: 0 10px;
+    }
+    
+    body.history-page .history-title {
+        font-size: 2rem;
+    }
+}

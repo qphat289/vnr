@@ -1,0 +1,31 @@
+/* Minimal History Page Background Enhancement */
+/* CHỈ thêm background và overlay - KHÔNG thay đổi layout */
+
+/* Background overlay cho history page - VỪA PHẢI */
+body.history-page::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Text shadow để dễ đọc trên background */
+.history-page h1,
+.history-page h2,
+.history-page h3,
+.history-page p,
+.history-page blockquote {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Mobile optimization - tăng overlay nhẹ */
+@media (max-width: 768px) {
+    body.history-page::before {
+        background: rgba(0, 0, 0, 0.55);
+    }
+}

@@ -1,11 +1,5 @@
 // Main JavaScript cho trang chủ
 document.addEventListener('DOMContentLoaded', function () {
-    // For testing: add some completed levels
-    if (gameState.completedLevels.length === 0) {
-        gameState.completedLevels = [1, 2, 3]; // Test with first 3 levels completed
-        gameState.unlockedLevels = [1, 2, 3, 4, 5]; // And unlock first 5 levels
-    }
-
     initializeTimeline();
     updateProgress();
     setupAudio();
@@ -24,9 +18,11 @@ function initializeTimeline() {
         // Create detail button for completed days
         const detailButton = getDetailButton(day.id, status);
 
+        const dayOrderText = `Ngày thứ ${index + 1}: ${day.date}`;
+
         timelineItem.innerHTML = `
             <div class="timeline-content" onclick="openDay(${day.id})">
-                <div class="timeline-date">${day.date}</div>
+                <div class="timeline-date">${dayOrderText}</div>
                 <div class="timeline-title">${day.title}</div>
                 <div class="timeline-desc">${day.description.substring(0, 100)}...</div>
                 <div class="timeline-status-container">
@@ -42,6 +38,10 @@ function initializeTimeline() {
 
 // Xác định trạng thái của từng ngày
 function getTimelineStatus(dayId) {
+    // Đảm bảo mảng luôn tồn tại
+    gameState.completedLevels = Array.isArray(gameState.completedLevels) ? gameState.completedLevels : [];
+    gameState.unlockedLevels = Array.isArray(gameState.unlockedLevels) && gameState.unlockedLevels.length > 0 ? gameState.unlockedLevels : [1];
+
     if (gameState.completedLevels.includes(dayId)) {
         return { className: 'status-completed', text: '✓ Hoàn thành' };
     } else if (gameState.unlockedLevels.includes(dayId)) {
@@ -64,12 +64,33 @@ function updateProgress() {
     const progressElement = document.getElementById('progress');
     const progressFill = document.getElementById('progressFill');
 
-    const completed = gameState.completedLevels.length;
-    const percentage = (completed / 12) * 100;
+    // Bảo vệ dữ liệu
+    const completedSet = new Set(Array.isArray(gameState.completedLevels) ? gameState.completedLevels : []);
+    const completed = Math.min(completedSet.size, 12);
+    const percentage = Math.max(0, Math.min(100, (completed / 12) * 100));
 
-    progressElement.textContent = `${completed}/12 ngày`;
-    progressFill.style.width = `${percentage}%`;
+    if (progressElement) progressElement.textContent = `${completed}/12 ngày`;
+
+    if (progressFill) {
+        // Reset để đảm bảo transition hoạt động và width được áp dụng sau khi DOM sẵn sàng
+        progressFill.style.width = '0%';
+        requestAnimationFrame(() => {
+            progressFill.style.width = `${percentage}%`;
+        });
+    }
 }
+
+// Lắng nghe thay đổi từ tab khác hoặc sau khi chơi xong
+window.addEventListener('storage', (e) => {
+    if (e.key === 'dienBienPhuGameState') {
+        loadGameState();
+        // Làm mới timeline và thanh tiến độ
+        const timeline = document.getElementById('timeline');
+        if (timeline) timeline.innerHTML = '';
+        initializeTimeline();
+        updateProgress();
+    }
+});
 
 // Mở trang chi tiết một ngày
 function openDay(dayId) {

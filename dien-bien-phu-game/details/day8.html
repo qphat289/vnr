@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 
 <head>
@@ -7,13 +7,36 @@
     <title>Ngày 8 - Chi Tiết | Điện Biên Phủ Trên Không</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/detail.css">
+    <link rel="stylesheet" href="../css/backgrounds.css">
+    <link rel="stylesheet" href="../css/simple-bg.css">
+    <link rel="stylesheet" href="../css/detail-blocks.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <div class="detail-container"><header class="detail-header">
+<body class="day8-page page-background background-overlay">
+    <!-- Music Control Button -->
+    <div class="music-control" id="musicControl">
+        <button class="music-btn" id="musicBtn">
+            <span class="music-icon">🎵</span>
+            <span class="music-text">NHẠC</span>
+        </button>
+        <div class="music-wave" id="musicWave">
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="backgroundMusic" loop preload="auto" style="display: none;">
+        <source src="../assets/audio/dien-bien-phu-theme.mp3" type="audio/mpeg">
+        Trình duyệt của bạn không hỗ trợ audio.
+    </audio>
+
+    <div class="detail-container">
+        <header class="detail-header">
             <div class="container">
                 <div class="back-navigation">
                     <button onclick="goBack()" class="back-btn">← Quay lại</button>
@@ -30,65 +53,45 @@
                     <div class="main-content">
                         <!-- Diễn biến chính -->
                         <div class="content-section">
-                            <h3>📋 Diễn biến</h3>
+                            <h3>📌 Diễn biến</h3>
                             <div class="timeline-event">
                                 <div class="event-time">25/12/1972 - Sau Noel</div>
                                 <div class="event-description">
-                                    <p>Sau Noel, <strong>Mỹ nối lại ném bom</strong>, 33 lượt B-52 đánh Thái Nguyên, Hải
-                                        Phòng. Hà Nội ít bị đánh. Ta bắn rơi 2 B-52.</p>
-
-                                    <div class="key-points">
-                                        <h4>🎯 Thay đổi chiến thuật:</h4>
-                                        <ul>
-                                            <li>🔄 <strong>Nối lại chiến dịch sau kỳ nghỉ</strong></li>
-                                            <li>📉 <strong>Giảm quy mô rõ rệt (33 B-52)</strong></li>
-                                            <li>🏭 <strong>Tập trung Thái Nguyên, Hải Phòng</strong></li>
-                                            <li>🛡️ <strong>Hà Nội ít bị đánh</strong></li>
-                                        </ul>
-                                    </div>
+                                    <p>Sau Noel, <strong>Mỹ nối lại ném bom</strong>, 33 lượt B-52 đánh Thái Nguyên, Hải Phòng. Hà Nội ít bị đánh. Ta bắn rơi 2 B-52.</p>
 
                                     <div class="target-analysis">
-                                        <h4>🎯 Phn bố mục tiêu:</h4>
+                                        <h4>🎯 Phân bổ mục tiêu:</h4>
                                         <div class="target-list">
                                             <div class="target-item primary">
-                                                <span class="target-icon">🏭</span>
+                                                <span class="target-icon">🎯</span>
                                                 <span class="target-name">Thái Nguyên</span>
                                                 <span class="target-status">Mục tiêu chính</span>
                                             </div>
                                             <div class="target-item primary">
-                                                <span class="target-icon">⚓</span>
+                                                <span class="target-icon">🎯</span>
                                                 <span class="target-name">Hải Phòng</span>
                                                 <span class="target-status">Mục tiêu chính</span>
                                             </div>
                                             <div class="target-item avoided">
-                                                <span class="target-icon">🏛️</span>
+                                                <span class="target-icon">➖</span>
                                                 <span class="target-name">Hà Nội</span>
                                                 <span class="target-status">Ít bị đánh</span>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="vietnam-response">
-                                        <h4>🚀 Phản ứng của ta:</h4>
-                                        <ul>
-                                            <li>⚡ Sẵn sàng đón đánh sau kỳ nghỉ</li>
-                                            <li>🎯 Bắn rơi 2 B-52 ngay trong ngày trở lại</li>
-                                            <li>💪 Chứng minh sự cảnh giác không ngừng</li>
-                                            <li>🛡️ Duy trì hiệu quả phòng không cao</li>
-                                        </ul>
-                                    </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Tổn thất -->
                         <div class="content-section">
-                            <h3>💥 Tổn thất Mỹ</h3>
+                            <h3>⚔️ Tổn thất Mỹ</h3>
                             <div class="casualties-grid">
                                 <div class="casualty-item primary">
                                     <div class="casualty-number">2</div>
                                     <div class="casualty-type">B-52</div>
-                                    <div class="casualty-detail">Bắn rơi ngay ngày trở lại</div>
+                                    <div class="casualty-detail">Bị bắn rơi ngay ngày trở lại</div>
                                 </div>
                             </div>
                             <div class="casualty-analysis">
@@ -99,28 +102,26 @@
 
                         <!-- Ý nghĩa lịch sử -->
                         <div class="content-section">
-                            <h3>⭐ Ý nghĩa lịch sử</h3>
+                            <h3>📖 Ý nghĩa lịch sử</h3>
                             <div class="significance-content">
                                 <div class="significance-highlight">
-                                    <h4>🔄 Quay lại nhưng yếu hơn:</h4>
+                                    <h4>⬇️ Quay lại nhưng yếu hơn:</h4>
                                     <p><strong>Mỹ quay lại chiến dịch</strong> nhưng đã giảm rõ rệt quy mô tấn công.</p>
                                 </div>
                                 <div class="significance-highlight">
-                                    <h4>💪 Sẵn sàng thường trực:</h4>
-                                    <p>Ta chứng minh: <strong>bất cứ khi nào Mỹ tấn công, Hà Nội cũng sẵn sàng.</strong>
-                                    </p>
+                                    <h4>⚡ Sẵn sàng thường trực:</h4>
+                                    <p>Ta chứng minh: <strong>bất cứ khi nào Mỹ tấn công, Hà Nội cũng sẵn sàng.</strong></p>
                                 </div>
                                 <div class="significance-highlight">
                                     <h4>🎯 Hiệu quả không giảm:</h4>
-                                    <p>Tỷ lệ bắn hạ <strong>6.1%</strong> cho thấy sức mạnh phòng không vẫn nguyên vẹn.
-                                    </p>
+                                    <p>Tỷ lệ bắn hạ <strong>6.1%</strong> cho thấy sức mạnh phòng không vẫn nguyên vẹn.</p>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Các sự kiện chính -->
                         <div class="content-section">
-                            <h3>🎯 Sự kiện chính</h3>
+                            <h3>⭐ Sự kiện chính</h3>
                             <div class="events-timeline">
                                 <div class="timeline-item-detail">
                                     <div class="timeline-marker"></div>
@@ -143,9 +144,9 @@
                             </div>
                         </div>
 
-                        <!-- Phn tích chiến lược -->
+                        <!-- Phân tích chiến lược -->
                         <div class="content-section">
-                            <h3>🧠 Phn tích chiến lược</h3>
+                            <h3>🧠 Phân tích chiến lược</h3>
                             <div class="strategic-analysis">
                                 <div class="analysis-grid">
                                     <div class="analysis-item enemy">
@@ -154,7 +155,7 @@
                                             <h4>Phía Mỹ</h4>
                                         </div>
                                         <ul>
-                                            <li>Giảm mạnh cường độ tấn công (33 vs 129 ngày đầu)</li>
+                                            <li>Giảm mạnh cường độ tấn công (33 so với 129 ngày đầu)</li>
                                             <li>Tránh Hà Nội, chuyển hướng mục tiêu</li>
                                             <li>Thử nghiệm chiến thuật mới sau kỳ nghỉ</li>
                                             <li>Vẫn chưa tìm được cách đối phó hiệu quả</li>
@@ -179,7 +180,7 @@
 
                     <div class="sidebar">
                         <div class="info-box">
-                            <h4>📅 Thông tin cơ bản</h4>
+                            <h4>ℹ️ Thông tin cơ bản</h4>
                             <div class="info-item">
                                 <strong>Ngày:</strong> 25/12/1972
                             </div>
@@ -215,7 +216,7 @@
                         </div>
 
                         <div class="comparison-box">
-                            <h4>📈 So sánh cường độ</h4>
+                            <h4>📊 So sánh cường độ</h4>
                             <div class="comparison-item">
                                 <span class="comparison-label">Ngày 1:</span>
                                 <span class="comparison-value high">129 B-52</span>
@@ -231,23 +232,20 @@
                         </div>
 
                         <div class="navigation-box">
-                            <h4>🧭 Điều hướng</h4>
-                            <button onclick="playDay(8)" class="play-btn">🎮 Chơi ngày này</button>
+                            <h4>🎵 Điều hướng</h4>
+                            <button onclick="playDay(8)" class="play-btn">▶️ Chơi ngày này</button>
                             <button onclick="viewDay(7)" class="prev-btn">⬅️ Ngày trước</button>
                             <button onclick="viewDay(9)" class="next-btn">➡️ Ngày tiếp theo</button>
-                            <button onclick="viewAllDays()" class="overview-btn">📋 Xem tất cả</button>
+                            <button onclick="viewAllDays()" class="overview-btn">📅 Xem tất cả</button>
                         </div>
                     </div>
                 </div>
             </div>
         </main>
-    </div><script src="../js/data.js"></script>
-    <script src="../js/detail.js"></script></body>
+    </div>
 
+    <script src="../js/data.js"></script>
+    <script src="../js/detail.js"></script>
+    <script src="../js/global-music.js"></script>
+</body>
 </html>
-
-</html>
-
-
-
-

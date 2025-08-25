@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Điện Biên Phủ Trên Không - 12 Ngày Đêm Lịch Sử</title>
     <link rel="stylesheet" href="dien-bien-phu-game/css/style.css">
+    <link rel="stylesheet" href="dien-bien-phu-game/css/backgrounds.css">
+    <link rel="stylesheet" href="dien-bien-phu-game/css/simple-bg.css">
+    <link rel="stylesheet" href="dien-bien-phu-game/css/gray-borders.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="home-page page-background" style="background-image: url('dien-bien-phu-game/css/home-bg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;">
     <div class="hero-section">
         <div class="container">
             <header class="main-header">
@@ -70,7 +73,7 @@
                         </div>
 
                         <div class="stat-achievement">
-                            <div class="stat-icon">�</div>
+                            <div class="stat-icon">👩‍✈️</div>
                             <div class="stat-info">
                                 <div class="stat-number">43</div>
                                 <div class="stat-label">Giặc lái bị bắt sống</div>
@@ -78,7 +81,7 @@
                         </div>
 
                         <div class="stat-achievement">
-                            <div class="stat-icon">�️</div>
+                            <div class="stat-icon">👨‍✈️</div>
                             <div class="stat-info">
                                 <div class="stat-number">33</div>
                                 <div class="stat-label">Giặc lái B-52 bị bắt</div>
@@ -88,7 +91,7 @@
                         <div class="stat-achievement">
                             <div class="stat-icon">💣</div>
                             <div class="stat-info">
-                                <div class="stat-number">10,000+</div>
+                                <div class="stat-number">15,000+</div>
                                 <div class="stat-label">Tấn bom địch thả xuống</div>
                             </div>
                         </div>
@@ -103,7 +106,7 @@
                     </div>
 
                     <div class="historical-note">
-                        <div class="note-icon">�</div>
+                        <div class="note-icon">📊</div>
                         <div class="note-content">
                             <strong>Thống kê chi tiết:</strong><br>
                             Bao gồm: 5 F-111A, 21 F-4, 12 A-7, 1 F-105, 4 A-6, 2 RA-5C, 1 trực thăng HH-53, 1 máy bay
@@ -119,9 +122,9 @@
                     <a href="boi-canh-lich-su.html" class="history-button">
                         📚 Bối Cảnh Lịch Sử
                     </a>
-                    <a href="https://www.youtube.com/watch?v=B_h556DlLmw&t=29s" target="_blank" class="video-button">
-                        🎬 Video Tóm Tắt
-                    </a>
+                    <button class="video-button" onclick="openVideoLibrary()">
+                        🎬 Kho video tư liệu
+                    </button>
                     <button class="start-button" onclick="startJourney()">
                         🚀 Bắt Đầu Hành Trình
                     </button>
@@ -237,12 +240,126 @@
     <footer class="main-footer">
         <div class="container">
             <p>&copy; 2025 - Dự án môn VNR202 - Lịch sử Đảng Cộng sản Việt Nam</p>
-            <p>"Hà Nội - Điện Biên Phủ trên không" - 12 ngày đêm anh hùng</p>
+            <p>"Hà Nội - Điện Biên Phủ trên không" - Giải mã "Pháo đài bay" sụp đổ - P1</p>
         </div>
     </footer>
 
+    <!-- Video Library Modal -->
+    <div id="videoLibraryModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Kho video tư liệu</h2>
+                <span class="close" onclick="closeVideoLibrary()">×</span>
+            </div>
+            <div class="modal-body">
+                <div class="video-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;padding:10px;">
+                    <div class="video-item">
+                        <h4 style="color: #FFD700; margin-bottom: 10px;">Điện Biên Phủ trên không - Tài liệu lịch sử</h4>
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/IrvIk8gtjSk" title="Điện Biên Phủ trên không" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius: 8px;"></iframe>
+                    </div>
+                    <div class="video-item">
+                        <h4 style="color: #FFD700; margin-bottom: 10px;">Giải mã "Pháo đài bay" sụp đổ - P1</h4>
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/d_sy4OdArgg" title="Giải mã "Pháo đài bay" sụp đổ - P1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius: 8px;"></iframe>
+                    </div>
+                    <div class="video-item">
+                        <h4 style="color: #FFD700; margin-bottom: 10px;">Giải mã "Pháo đài bay" sụp đổ - P2</h4>
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/_c2gytQ8xRQ" title="Giải mã "Pháo đài bay" sụp đổ - P2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius: 8px;"></iframe>
+                    </div>
+                    <div class="video-item">
+                        <h4 style="color: #FFD700; margin-bottom: 10px;">Hà Nội trong những ngày tháng 12</h4>
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/34cj7EJSdjA" title="Hà Nội trong tháng 12" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius: 8px;"></iframe>
+                    </div>
+                    <div class="video-item">
+                        <h4 style="color: #FFD700; margin-bottom: 10px;">Ký ức chiến tranh</h4>
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/7LpIaptAyA0" title="Ký ức chiến tranh" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius: 8px;"></iframe>
+                    </div>
+                    <div class="video-item">
+                        <h4 style="color: #FFD700; margin-bottom: 10px;">Điện Biên Phủ trên không - Tài liệu bổ sung</h4>
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/A0uCy8Kk1sg" title="Điện Biên Phủ trên không - Tài liệu bổ sung" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius: 8px;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="dien-bien-phu-game/js/data.js"></script>
     <script src="dien-bien-phu-game/js/main.js"></script>
+    
+    <style>
+    /* Additional modal styling for better compatibility */
+    .modal {
+        display: none !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background-color: rgba(0, 0, 0, 0.8) !important;
+        z-index: 9999 !important;
+    }
+    
+    .modal.show {
+        display: block !important;
+    }
+    
+    .modal-content {
+        position: relative !important;
+        margin: 2% auto !important;
+        width: 90% !important;
+        max-width: 900px !important;
+        max-height: 90vh !important;
+        overflow-y: auto !important;
+    }
+    </style>
+    
+    <script>
+    function openVideoLibrary(){
+        const modal = document.getElementById('videoLibraryModal');
+        if(modal){ 
+            modal.style.display = 'block';
+            modal.classList.add('show');
+            // Focus on modal for accessibility
+            modal.focus();
+            console.log('Modal opened'); // Debug log
+        } else {
+            console.error('Modal not found'); // Debug log
+        }
+    }
+    
+    function closeVideoLibrary(){
+        const modal = document.getElementById('videoLibraryModal');
+        if(modal){
+            // Stop all videos when closing
+            modal.querySelectorAll('iframe').forEach(iframe => { 
+                iframe.src = iframe.src; 
+            });
+            modal.style.display = 'none';
+            modal.classList.remove('show');
+            console.log('Modal closed'); // Debug log
+        }
+    }
+
+    // Close modal when clicking outside of it
+    document.addEventListener('DOMContentLoaded', function() {
+        const modal = document.getElementById('videoLibraryModal');
+        if (modal) {
+            modal.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    closeVideoLibrary();
+                }
+            });
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && modal.style.display === 'block') {
+                closeVideoLibrary();
+            }
+        });
+        
+        console.log('Modal event listeners added'); // Debug log
+    });
+    </script>
 </body>
 
 </html>

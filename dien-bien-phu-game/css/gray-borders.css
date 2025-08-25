@@ -1,0 +1,117 @@
+/* Enhanced Block Styling with Gray Borders */
+
+/* Cải thiện quote block */
+.intro-text .quote {
+    background: rgba(128, 128, 128, 0.15) !important;
+    border: 2px solid rgba(128, 128, 128, 0.4) !important;
+    border-radius: 15px !important;
+    padding: 20px !important;
+    margin: 15px 0 !important;
+    backdrop-filter: blur(8px) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Cải thiện description block */
+.description {
+    background: rgba(128, 128, 128, 0.1) !important;
+    border: 2px solid rgba(128, 128, 128, 0.3) !important;
+    border-radius: 20px !important;
+    padding: 25px !important;
+    backdrop-filter: blur(10px) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Cải thiện feature blocks */
+.feature {
+    background: rgba(128, 128, 128, 0.12) !important;
+    border: 2px solid rgba(128, 128, 128, 0.4) !important;
+    border-radius: 18px !important;
+    padding: 25px !important;
+    backdrop-filter: blur(12px) !important;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.3) !important;
+    transition: all 0.3s ease !important;
+}
+
+.feature:hover {
+    transform: translateY(-8px) !important;
+    background: rgba(128, 128, 128, 0.18) !important;
+    border-color: rgba(169, 169, 169, 0.6) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Cải thiện stats panel */
+.stats-panel {
+    background: rgba(128, 128, 128, 0.15) !important;
+    border: 2px solid rgba(128, 128, 128, 0.4) !important;
+    border-radius: 25px !important;
+    padding: 30px !important;
+    backdrop-filter: blur(15px) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Cải thiện achievement stats */
+.stat-achievement {
+    background: rgba(128, 128, 128, 0.1) !important;
+    border: 1px solid rgba(128, 128, 128, 0.3) !important;
+    border-radius: 15px !important;
+    padding: 18px !important;
+    border-left: 4px solid #a9a9a9 !important;
+    backdrop-filter: blur(8px) !important;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2) !important;
+    transition: all 0.3s ease !important;
+}
+
+.stat-achievement:hover {
+    background: rgba(128, 128, 128, 0.18) !important;
+    transform: translateX(8px) !important;
+    border-left-color: #d3d3d3 !important;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Cải thiện action buttons - chỉ áp dụng cho history button */
+.history-button {
+    background: rgba(128, 128, 128, 0.2) !important;
+    border: 2px solid rgba(128, 128, 128, 0.5) !important;
+    border-radius: 25px !important;
+    padding: 15px 30px !important;
+    backdrop-filter: blur(10px) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25) !important;
+    transition: all 0.3s ease !important;
+}
+
+.history-button:hover {
+    background: rgba(128, 128, 128, 0.3) !important;
+    border-color: rgba(169, 169, 169, 0.7) !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* Video button giữ nguyên style cũ - không áp dụng gray styling */
+
+/* Cải thiện date range */
+.date-range {
+    background: rgba(128, 128, 128, 0.15) !important;
+    border: 2px solid rgba(128, 128, 128, 0.4) !important;
+    border-radius: 30px !important;
+    padding: 12px 25px !important;
+    backdrop-filter: blur(10px) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Cải thiện progress bar container */
+.progress-info {
+    background: rgba(128, 128, 128, 0.1) !important;
+    border: 2px solid rgba(128, 128, 128, 0.3) !important;
+    border-radius: 20px !important;
+    padding: 20px !important;
+    backdrop-filter: blur(8px) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+.progress-bar {
+    background: rgba(128, 128, 128, 0.2) !important;
+    border: 1px solid rgba(128, 128, 128, 0.4) !important;
+    border-radius: 15px !important;
+    overflow: hidden !important;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+}

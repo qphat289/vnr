@@ -1,0 +1,86 @@
+/* FOOTER NORMAL - AT BOTTOM */
+
+/* Make HTML and body full height */
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Background image for history page */
+body.history-page {
+    background: url('../assets/backgrounds/gia-tri-lich-su-cua-chien-thang-dien-bien-phu-tren-khong-24-.1632.jpg') center/cover fixed !important;
+    background-color: #1a472a !important;
+    font-family: 'Roboto Slab', serif;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Force content to expand and push footer down */
+body.history-page > .history-page {
+    flex: 1;
+}
+
+/* NORMAL FOOTER - ALWAYS AT BOTTOM */
+body.history-page .main-footer {
+    background: linear-gradient(135deg, #0f2415 0%, #1a472a 100%);
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    border-top: 3px solid #FFD700;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer content styling */
+body.history-page .main-footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+body.history-page .main-footer p {
+    margin: 8px 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+body.history-page .main-footer p:first-child {
+    font-weight: bold;
+    color: #FFD700;
+}
+
+body.history-page .main-footer p:last-child {
+    font-style: italic;
+    color: #a8d8a8;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    body.history-page .main-footer {
+        padding: 30px 0;
+    }
+    
+    body.history-page .main-footer p {
+        font-size: 14px;
+    }
+    
+    body.history-page {
+        background-attachment: scroll !important;
+    }
+}
+
+/* Text readability */
+body.history-page h1,
+body.history-page h2,
+body.history-page h3,
+body.history-page p,
+body.history-page blockquote {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}

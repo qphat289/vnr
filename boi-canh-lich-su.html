@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bối Cảnh Lịch Sử - Điện Biên Phủ Trên Không</title>
-    <link rel="stylesheet" href="dien-bien-phu-game/css/style.css">
+    <link rel="stylesheet" href="dien-bien-phu-game/css/exact-history.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="history-page">
     <div class="history-page">
         <div class="container">
             <!-- Header -->
@@ -67,14 +67,103 @@
                 </div>
             </div>
         </div>
+        
+        <footer class="main-footer">
+            <div class="container">
+                <p>&copy; 2025 - Dự án môn VNR202 - Lịch sử Đảng Cộng sản Việt Nam</p>
+                <p>"Hà Nội - Điện Biên Phủ trên không" - 12 ngày đêm anh hùng</p>
+            </div>
+        </footer>
     </div>
 
-    <footer class="main-footer">
-        <div class="container">
-            <p>&copy; 2025 - Dự án môn VNR202 - Lịch sử Đảng Cộng sản Việt Nam</p>
-            <p>"Hà Nội - Điện Biên Phủ trên không" - 12 ngày đêm anh hùng</p>
-        </div>
-    </footer>
+    <div id="audioControl" class="audio-control-icon">
+        <button id="narrationToggle" aria-label="Phát thuyết minh">
+            <span id="audioIcon">🔊</span>
+        </button>
+    </div>
+
+    <audio id="narrationAudio" preload="auto">
+        <source src="dien-bien-phu-game/assets/audio/boi-canh-lich-su.mp3" type="audio/mpeg">
+    </audio>
+    
+    <style>
+        .audio-control-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+        
+        .audio-control-icon button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.6);
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .audio-control-icon button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+            transform: scale(1.05);
+        }
+    </style>
+
+    <script>
+    (function(){
+        const btn = document.getElementById('narrationToggle');
+        const audio = document.getElementById('narrationAudio');
+        const audioIcon = document.getElementById('audioIcon');
+        if(!btn || !audio || !audioIcon) return;
+        let playing = false;
+        audio.volume = 0.9;
+        
+        // Add event listeners for audio events
+        audio.addEventListener('ended', function() {
+            playing = false;
+            audioIcon.textContent = '🔊';
+        });
+        
+        audio.addEventListener('error', function(e) {
+            console.error('Audio error:', e);
+            audioIcon.textContent = '❌';
+        });
+        
+        btn.addEventListener('click', async function(){
+            try{
+                if(!playing){
+                    // Try to load the audio first
+                    if (audio.readyState < 2) {
+                        audio.load();
+                        await new Promise((resolve, reject) => {
+                            audio.addEventListener('canplaythrough', resolve, { once: true });
+                            audio.addEventListener('error', reject, { once: true });
+                        });
+                    }
+                    await audio.play();
+                    playing = true;
+                    audioIcon.textContent = '🔇';
+                }else{
+                    audio.pause();
+                    playing = false;
+                    audioIcon.textContent = '🔊';
+                }
+            }catch(e){ 
+                console.log('Error playing audio:', e);
+                audioIcon.textContent = '❌';
+            }
+        });
+        // Pause on navigate away
+        window.addEventListener('beforeunload', ()=>{ if(!audio.paused){ audio.pause(); }});
+    })();
+    </script>
 </body>
 
 </html>

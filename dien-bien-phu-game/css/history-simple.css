@@ -1,0 +1,112 @@
+/* HISTORY PAGE STYLING - SIMPLE & EFFECTIVE */
+
+/* Make HTML and body full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Background image for history page */
+body.history-page {
+    background: url('../assets/backgrounds/gia-tri-lich-su-cua-chien-thang-dien-bien-phu-tren-khong-24-.1632.jpg') center/cover fixed !important;
+    background-color: #1a472a !important;
+    font-family: 'Roboto Slab', serif;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content wrapper */
+body.history-page > .history-page {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container should grow to fill space */
+body.history-page .container {
+    flex: 1;
+}
+
+/* Override any other background styles */
+body.history-page,
+.history-page {
+    background-image: url('../assets/backgrounds/gia-tri-lich-su-cua-chien-thang-dien-bien-phu-tren-khong-24-.1632.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+    body.history-page {
+        background-attachment: scroll !important;
+    }
+}
+
+/* Remove any background from content elements */
+body.history-page .container,
+body.history-page .history-content,
+body.history-page .content-wrapper {
+    background: transparent !important;
+}
+
+/* Text readability */
+body.history-page h1,
+body.history-page h2,
+body.history-page h3,
+body.history-page p,
+body.history-page blockquote {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Footer styling - STICKY TO BOTTOM */
+body.history-page .main-footer {
+    background: linear-gradient(135deg, #0f2415 0%, #1a472a 100%) !important;
+    color: white !important;
+    text-align: center !important;
+    padding: 40px 0 !important;
+    border-top: 3px solid #FFD700 !important;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.3) !important;
+    margin-top: auto !important;
+    flex-shrink: 0 !important;
+}
+
+body.history-page .main-footer .container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+}
+
+body.history-page .main-footer p {
+    margin: 8px 0 !important;
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+}
+
+body.history-page .main-footer p:first-child {
+    font-weight: bold !important;
+    color: #FFD700 !important;
+}
+
+body.history-page .main-footer p:last-child {
+    font-style: italic !important;
+    color: #a8d8a8 !important;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    body.history-page .main-footer {
+        padding: 30px 0 !important;
+        margin-top: auto !important;
+    }
+    
+    body.history-page .main-footer p {
+        font-size: 14px !important;
+    }
+}

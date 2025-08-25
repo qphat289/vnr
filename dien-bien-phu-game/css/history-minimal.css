@@ -1,0 +1,48 @@
+/* Minimal History Page Background Enhancement */
+/* CHỈ thêm background và overlay - KHÔNG thay đổi layout */
+
+/* Background overlay cho history page - VỪA PHẢI */
+body.history-page::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Chỉ thêm text shadow để dễ đọc - KHÔNG thay đổi layout */
+.history-page h1,
+.history-page h2,
+.history-page h3,
+.history-page p {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* KHÔNG dùng flexbox - giữ nguyên layout gốc */
+/* Footer sẽ tự nhiên ở cuối theo content */
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+    body.history-page::before {
+        background: rgba(0, 0, 0, 0.55);
+    }
+}
+
+/* Chỉ thêm một chút shadow cho text để dễ đọc hơn */
+.history-page h1,
+.history-page h2,
+.history-page h3,
+.history-page p {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+    body.history-page::before {
+        background: rgba(0, 0, 0, 0.5);
+    }
+}

@@ -1,0 +1,145 @@
+/* Background styling cho tất cả các pages */
+body.home-page, 
+body.day1-page, 
+body.day2-page, 
+body.day3-page, 
+body.day4-page, 
+body.day5-page, 
+body.day6-page, 
+body.day7-page, 
+body.day8-page, 
+body.day9-page, 
+body.day10-page, 
+body.day11-page, 
+body.day12-page {
+    background-image: url('home-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
+/* History page has its own background - no override */
+body.history-page {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Thêm overlay tối để làm ảnh tối màu cho day pages - KHÔNG bao gồm history */
+body.home-page::before,
+body.day1-page::before,
+body.day2-page::before, 
+body.day3-page::before, 
+body.day4-page::before, 
+body.day5-page::before, 
+body.day6-page::before, 
+body.day7-page::before, 
+body.day8-page::before, 
+body.day9-page::before, 
+body.day10-page::before, 
+body.day11-page::before, 
+body.day12-page::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Overlay đen 60% - tối hơn */
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Đảm bảo content hiển thị trên overlay cho tất cả pages */
+body.home-page > *,
+body.day1-page > *,
+body.day2-page > *, 
+body.day3-page > *, 
+body.day4-page > *, 
+body.day5-page > *, 
+body.day6-page > *, 
+body.day7-page > *, 
+body.day8-page > *, 
+body.day9-page > *, 
+body.day10-page > *, 
+body.day11-page > *, 
+body.day12-page > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Background transparent cho tất cả elements bên trong */
+body.home-page *,
+body.day1-page *,
+body.day2-page *, 
+body.day3-page *, 
+body.day4-page *, 
+body.day5-page *, 
+body.day6-page *, 
+body.day7-page *, 
+body.day8-page *, 
+body.day9-page *, 
+body.day10-page *, 
+body.day11-page *, 
+body.day12-page * {
+    background-color: transparent !important;
+}
+
+/* Background transparent cho sections */
+body.home-page .hero-section,
+body.home-page .damage-section,
+body.home-page section,
+body.day1-page .detail-container,
+body.day1-page .detail-header,
+body.day1-page .detail-content,
+body.day1-page section,
+body.day2-page .detail-container,
+body.day2-page .detail-header,
+body.day2-page .detail-content,
+body.day2-page section,
+body.day3-page .detail-container,
+body.day3-page .detail-header,
+body.day3-page .detail-content,
+body.day3-page section,
+body.day4-page .detail-container,
+body.day4-page .detail-header,
+body.day4-page .detail-content,
+body.day4-page section,
+body.day5-page .detail-container,
+body.day5-page .detail-header,
+body.day5-page .detail-content,
+body.day5-page section,
+body.day6-page .detail-container,
+body.day6-page .detail-header,
+body.day6-page .detail-content,
+body.day6-page section,
+body.day7-page .detail-container,
+body.day7-page .detail-header,
+body.day7-page .detail-content,
+body.day7-page section,
+body.day8-page .detail-container,
+body.day8-page .detail-header,
+body.day8-page .detail-content,
+body.day8-page section,
+body.day9-page .detail-container,
+body.day9-page .detail-header,
+body.day9-page .detail-content,
+body.day9-page section,
+body.day10-page .detail-container,
+body.day10-page .detail-header,
+body.day10-page .detail-content,
+body.day10-page section,
+body.day11-page .detail-container,
+body.day11-page .detail-header,
+body.day11-page .detail-content,
+body.day11-page section,
+body.day12-page .detail-container,
+body.day12-page .detail-header,
+body.day12-page .detail-content,
+body.day12-page section {
+    background: transparent !important;
+}

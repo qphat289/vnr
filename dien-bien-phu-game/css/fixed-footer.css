@@ -1,0 +1,84 @@
+/* FOOTER FIX - DIRECT APPROACH */
+
+/* Ensure body has enough height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic body background */
+body.history-page {
+    background: url('../assets/backgrounds/gia-tri-lich-su-cua-chien-thang-dien-bien-phu-tren-khong-24-.1632.jpg') center/cover fixed !important;
+    background-color: #1a472a !important;
+    font-family: 'Roboto Slab', serif;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Content padding for footer */
+body.history-page .history-page {
+    padding-bottom: 150px; /* Space for footer */
+}
+
+/* STICKY FOOTER - GUARANTEED */
+body.history-page .main-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #0f2415 0%, #1a472a 100%) !important;
+    color: white !important;
+    text-align: center !important;
+    padding: 30px 0 !important;
+    border-top: 3px solid #FFD700 !important;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.3) !important;
+    z-index: 100;
+}
+
+/* Footer content styling */
+body.history-page .main-footer .container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+}
+
+body.history-page .main-footer p {
+    margin: 8px 0 !important;
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+}
+
+body.history-page .main-footer p:first-child {
+    font-weight: bold !important;
+    color: #FFD700 !important;
+}
+
+body.history-page .main-footer p:last-child {
+    font-style: italic !important;
+    color: #a8d8a8 !important;
+}
+
+/* Mobile footer adjustments */
+@media (max-width: 768px) {
+    body.history-page .main-footer {
+        padding: 20px 0 !important;
+    }
+    
+    body.history-page .main-footer p {
+        font-size: 14px !important;
+    }
+    
+    body.history-page .history-page {
+        padding-bottom: 120px; /* Smaller space for footer */
+    }
+}
+
+/* Text readability */
+body.history-page h1,
+body.history-page h2,
+body.history-page h3,
+body.history-page p,
+body.history-page blockquote {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}

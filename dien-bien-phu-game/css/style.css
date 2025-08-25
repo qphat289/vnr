@@ -103,8 +103,16 @@ body {
     border-radius: 20px;
     padding: 30px;
     backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 215, 0, 0.3);
+    border: 2px solid rgba(255, 215, 0, 0.45);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
     height: fit-content;
+}
+
+.stats-panel:hover {
+    transform: translateY(-4px);
+    border-color: #ffd700;
+    box-shadow: 0 16px 40px rgba(255, 215, 0, 0.25);
 }
 
 .stats-panel h3 {
@@ -131,11 +139,15 @@ body {
     border-radius: 12px;
     border-left: 4px solid #ffd700;
     transition: all 0.3s ease;
+    border: 1px solid rgba(255, 215, 0, 0.35);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
 }
 
 .stat-achievement:hover {
     background: rgba(255, 215, 0, 0.2);
     transform: translateX(5px);
+    border-color: #ffd700;
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.25);
 }
 
 .stat-icon {
@@ -237,7 +249,8 @@ body {
     border-radius: 15px;
     text-align: center;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 215, 0, 0.3);
+    border: 1px solid rgba(255, 215, 0, 0.45);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
     transition: all 0.3s ease;
 }
 
@@ -245,6 +258,7 @@ body {
     transform: translateY(-5px);
     background: rgba(255, 255, 255, 0.15);
     border-color: #ffd700;
+    box-shadow: 0 12px 28px rgba(255, 215, 0, 0.2);
 }
 
 .feature h3 {
@@ -290,6 +304,12 @@ body {
 .progress-info {
     max-width: 400px;
     margin: 0 auto;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 215, 0, 0.35);
+    border-radius: 14px;
+    padding: 16px 18px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
 
 .progress-info p {
@@ -299,9 +319,9 @@ body {
 }
 
 .progress-bar {
-    background: rgba(255, 255, 255, 0.2);
-    height: 10px;
-    border-radius: 5px;
+    background: rgba(31, 238, 31, 0.678);
+    height: 14px;
+    border-radius: 7px;
     overflow: hidden;
     border: 1px solid rgba(255, 215, 0, 0.3);
 }
@@ -311,7 +331,9 @@ body {
     height: 100%;
     width: 0%;
     transition: width 0.8s ease;
-    border-radius: 5px;
+    border-radius: 7px;
+    display: block;
+    box-shadow: inset 0 0 2px rgb(0, 255, 21), 0 0 6px rgba(255, 217, 0, 0.651);
 }
 
 /* Damage Statistics Section */
@@ -356,7 +378,9 @@ body {
     border-radius: 20px;
     padding: 30px;
     backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 107, 107, 0.3);
+    border: 2px solid rgba(255, 107, 107, 0.55);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .enemy-losses {
@@ -365,6 +389,12 @@ body {
 
 .vietnam-impact {
     border-left: 6px solid #ffaa44;
+}
+
+.damage-card:hover {
+    transform: translateY(-6px);
+    border-color: #ff6b6b;
+    box-shadow: 0 16px 40px rgba(255, 107, 107, 0.25);
 }
 
 .damage-card h3 {
@@ -389,6 +419,12 @@ body {
     background: rgba(255, 107, 107, 0.1);
     border-radius: 12px;
     border-left: 4px solid #ff6b6b;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.damage-item:hover {
+    background: rgba(255, 107, 107, 0.18);
+    transform: translateX(4px);
 }
 
 .damage-number {
@@ -410,12 +446,13 @@ body {
     padding: 15px;
     border-radius: 10px;
     margin-top: 10px;
+    border: 1px solid rgba(255, 107, 107, 0.25);
 }
 
 .breakdown-item {
     color: #e0e0e0;
     padding: 5px 0;
-    border-bottom: 1px solid rgba(255, 107, 107, 0.2);
+    border-bottom: 1px solid rgba(255, 107, 107, 0.25);
     font-size: 0.95rem;
 }
 
@@ -438,6 +475,7 @@ body {
     padding: 20px;
     border-radius: 12px;
     border-left: 4px solid #ffaa44;
+    border: 1px solid rgba(255, 170, 68, 0.35);
 }
 
 .infrastructure-damage h4 {
@@ -455,7 +493,7 @@ body {
     color: #f0f0f0;
     font-size: 0.9rem;
     padding: 5px 0;
-    border-bottom: 1px solid rgba(255, 170, 68, 0.2);
+    border-bottom: 1px solid rgba(255, 170, 68, 0.25);
 }
 
 .damage-list div:last-child {
@@ -489,14 +527,15 @@ body {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 107, 107, 0.3);
+    border: 2px solid rgba(255, 107, 107, 0.45);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
     transition: all 0.3s ease;
 }
 
 .intensity-item:hover {
     transform: translateY(-5px);
     border-color: #ff6b6b;
-    box-shadow: 0 15px 30px rgba(255, 107, 107, 0.2);
+    box-shadow: 0 15px 30px rgba(255, 107, 107, 0.25);
 }
 
 .intensity-icon {
@@ -595,7 +634,7 @@ body {
     border-radius: 15px;
     position: relative;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 215, 0, 0.3);
+    border: 1px solid rgba(255, 215, 0, 0.45);
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -604,6 +643,7 @@ body {
     background: rgba(255, 255, 255, 0.15);
     border-color: #ffd700;
     transform: translateY(-5px);
+    box-shadow: 0 10px 26px rgba(255, 215, 0, 0.2);
 }
 
 .timeline-date {
@@ -615,6 +655,13 @@ body {
     font-size: 0.9rem;
     display: inline-block;
     margin-bottom: 10px;
+}
+
+/* Override for new format: make the date text red while keeping pill background subtle */
+.timeline-content .timeline-date {
+    background: rgba(255, 0, 0, 0.08);
+    border: 1px solid rgba(255, 0, 0, 0.35);
+    color: #ff4d4d;
 }
 
 .timeline-title {
