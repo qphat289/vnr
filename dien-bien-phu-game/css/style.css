@@ -686,17 +686,18 @@ body {
 /* Action Buttons Container */
 .action-buttons {
     display: flex;
-    gap: 20px;
+    gap: 15px;
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 30px;
 }
 
-/* Common button styles for both buttons */
+/* Common button styles for all buttons */
 .history-button,
+.video-button,
 .start-button {
-    padding: 15px 30px;
-    font-size: 18px;
+    padding: 15px 20px;
+    font-size: 16px;
     font-weight: bold;
     border-radius: 50px;
     cursor: pointer;
@@ -731,6 +732,38 @@ body {
 }
 
 .history-button:active {
+    transform: translateY(-1px);
+}
+
+/* Video Button */
+.video-button {
+    background: linear-gradient(135deg, #FF0000 0%, #CC0000 50%, #990000 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    min-width: 200px;
+    box-sizing: border-box;
+}
+
+.video-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 0, 0, 0.4);
+    background: linear-gradient(135deg, #FF4444 0%, #FF0000 50%, #CC0000 100%);
+    color: white;
+    text-decoration: none;
+}
+
+.video-button:active {
     transform: translateY(-1px);
 }
 
@@ -937,13 +970,14 @@ body {
 
 /* BUTTON SIZE FIX - Override to ensure equal button sizes */
 .action-buttons .history-button,
+.action-buttons .video-button,
 .action-buttons .start-button {
-    width: 260px !important;
-    min-width: 260px !important;
-    max-width: 260px !important;
+    width: 200px !important;
+    min-width: 200px !important;
+    max-width: 200px !important;
     height: 60px !important;
-    padding: 15px 20px !important;
-    font-size: 18px !important;
+    padding: 15px 15px !important;
+    font-size: 16px !important;
     font-weight: bold !important;
     border-radius: 50px !important;
     display: inline-block !important;
@@ -1040,6 +1074,7 @@ body {
     
     
     .history-button,
+    .video-button,
     .start-button,
     .nav-btn {
         width: 100%;
