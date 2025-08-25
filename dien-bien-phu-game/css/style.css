@@ -686,7 +686,7 @@ body {
 /* Action Buttons Container */
 .action-buttons {
     display: flex;
-    gap: 15px;
+    gap: 18px;
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 30px;
@@ -696,7 +696,7 @@ body {
 .history-button,
 .video-button,
 .start-button {
-    padding: 15px 20px;
+    padding: 15px 25px;
     font-size: 16px;
     font-weight: bold;
     border-radius: 50px;
@@ -744,14 +744,14 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 15px 30px;
+    padding: 15px 25px;
     border-radius: 25px;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 16px;
     transition: all 0.3s ease;
     border: none;
     cursor: pointer;
-    min-width: 200px;
+    min-width: 240px;
     box-sizing: border-box;
 }
 
@@ -972,11 +972,11 @@ body {
 .action-buttons .history-button,
 .action-buttons .video-button,
 .action-buttons .start-button {
-    width: 200px !important;
-    min-width: 200px !important;
-    max-width: 200px !important;
+    width: 240px !important;
+    min-width: 240px !important;
+    max-width: 240px !important;
     height: 60px !important;
-    padding: 15px 15px !important;
+    padding: 15px 20px !important;
     font-size: 16px !important;
     font-weight: bold !important;
     border-radius: 50px !important;
